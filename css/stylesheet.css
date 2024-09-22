@@ -1,0 +1,616 @@
+/* Global Setting */
+:root {
+  --mainColor: #c49c4dff;
+  --bgColor1: #000;
+  --bgColor2: #141414e6;
+  --fontColor1: #F5DEB3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--fontColor1);
+  background-color: var(--bgColor1);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  text-decoration: none;
+  color: var(--mainColor);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p,
+li {
+  color: var(--fontColor1);
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  height: 60px;
+  z-index: 999;
+}
+
+article {
+  margin-top: 40px;
+}
+
+hr {
+  width: 20%;
+  border-width: 3px;
+  color: var(--fontColor1);
+}
+
+.overlay {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  opacity: 0.5;
+  height: 100%;
+  position: absolute;
+  background: #000;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+/* Scrollbar Setting */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bgColor1);
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: grab;
+  background: var(--mainColor);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* #1 - Navbar Setting */
+nav .nav-link,
+nav .dropdown-toggle,
+nav .nav-link:focus,
+nav .dropdown-toggle:focus,
+nav .navbar-nav .nav-link.show {
+  color: var(--mainColor);
+}
+
+nav .nav-link:hover,
+nav .nav-link.active {
+  text-decoration: underline;
+  color: var(--mainColor) !important;
+}
+
+nav .navbar-toggler,
+nav .navbar-toggler i {
+  border: none;
+  color: var(--mainColor);
+}
+
+.dropdown-menu[data-bs-popper] {
+  right: 0 !important;
+  left: auto !important;
+  background: var(--bgColor2);
+  border: 1px solid var(--mainColor);
+}
+
+.dropdown-menu ul li {
+  cursor: pointer;
+}
+
+.dropdown-menu hr {
+  border-width: 4px;
+  color: var(--mainColor);
+}
+
+nav .dropdown-toggle::after {
+  display: none;
+}
+
+/* #2 - Header Setting */
+header.home-header {
+  min-height: 100vh;
+  position: relative;
+  background: url(/images/bg-slider.png);
+  background-size: cover;
+}
+
+header.home-header h1 {
+  font-size: 6vw;
+}
+
+header.home-header p {
+  height: 100px;
+  font-size: 1.5vw;
+}
+
+header.home-header .overlay-text {
+  opacity: 1;
+  z-index: 998;
+  height: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* #3 - About Setting */
+.about .my-info .my-info-box p {
+  font-size: 15px;
+  line-height: 2;
+}
+
+.about .my-info .my-info-box p span {
+  font-weight: bold;
+}
+
+.about .my-info .my-info-box .contact-info {
+  background: var(--bgColor2);
+  border: 1px solid var(--mainColor);
+}
+
+.about .my-info .my-info-box .contact-info .more a {
+  border: 1px solid var(--mainColor);
+}
+
+.about .my-info .my-img {
+  position: relative;
+}
+
+.about .my-info .my-img::before {
+  top: 0;
+  right: 0;
+  width: 30%;
+  content: "";
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  background: var(--mainColor);
+}
+
+.about .my-resume {
+  background: var(--bgColor2);
+}
+
+.about .my-resume .resume-box p {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about .my-resume .resume-box a {
+  font-weight: bold;
+  color: var(--bgColor2);
+  background: var(--mainColor);
+  border: 1px solid var(--mainColor);
+}
+
+/* #4 - Services Setting */
+.services .services-box .services-item {
+  background: var(--bgColor2);
+  border: 1px solid var(--mainColor);
+}
+
+.services .services-box .services-item p {
+  min-height: 120px;
+}
+
+.services .services-box .services-item button {
+  color: var(--mainColor);
+  background: var(--bgColor2);
+  border: 1px solid var(--mainColor);
+}
+
+.services .services-box .services-item:hover .order {
+  font-weight: bold;
+  color: var(--bgColor2);
+  background: var(--mainColor);
+  border: 1px solid var(--bgColor2);
+}
+
+.services .services-box .services-item .services-icon {
+  color: #4b4a4a8c;
+}
+
+.services .services-box .services-item:hover .services-icon {
+  color: var(--mainColor);
+}
+
+.services .services-popup .popup-item {
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  opacity: 0;
+  height: 90%;
+  z-index: -1;
+  position: fixed;
+  overflow: scroll;
+  background: var(--bgColor2);
+  border: 1px solid var(--mainColor);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  -webkit-transition: transform 0.3s ease, opacity 0.3s ease;
+  -moz-transition: transform 0.3s ease, opacity 0.3s ease;
+  -ms-transition: transform 0.3s ease, opacity 0.3s ease;
+  -o-transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translate(-50%, -50%) scale(0.5);
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+  -moz-transform: translate(-50%, -50%) scale(0.5);
+  -ms-transform: translate(-50%, -50%) scale(0.5);
+  -o-transform: translate(-50%, -50%) scale(0.5);
+}
+
+.services .services-popup .popup-item::-webkit-scrollbar {
+  display: none;
+}
+
+.services .services-popup .popup-item.active {
+  opacity: 1;
+  z-index: 2000;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+}
+
+.services .services-popup .popup-item .close {
+  top: 20px;
+  right: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  position: absolute;
+  color: var(--mainColor);
+}
+
+.services .services-popup .popup-item ul li {
+  height: 400px;
+  background: var(--bgColor2);
+  border: 1px solid var(--mainColor);
+}
+
+.services .services-popup .popup-item.course ul li {
+  height: 500px;
+} 
+
+.services .services-popup .popup-item ul li h5 {
+  color: var(--mainColor);
+}
+
+.services .services-popup .popup-item ul li p:first-of-type {
+  height: 30%;
+  font-size: 14px;
+}
+
+.services .services-popup .popup-item ul li p.price {
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  color: var(--bgColor2);
+  background: var(--mainColor);
+  border: 1px solid var(--fontColor1);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.services .services-popup .popup-item ul li ul.course-list {
+  list-style-type: square;
+}
+
+.services .services-popup .popup-item ul li ul.course-list li {
+  border: none;
+  height: auto !important;
+}
+
+.services .services-popup .popup-item ul li a {
+  font-weight: bold;
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+}
+
+/* #5 - Portfolio Setting */
+.btn-group {
+  flex-wrap: wrap;
+  background: var(--bgColor2);
+}
+
+.btn {
+  color: var(--fontColor1) !important;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  font-weight: bold;
+  background: var(--mainColor);
+  border-color: var(--bgColor2);
+  color: var(--bgColor2) !important;
+}
+
+.portfolio .category-box .category {
+  background: var(--bgColor2);
+}
+
+/* #6 - Blog Setting */
+.blog {
+  background: var(--bgColor2);
+}
+
+.blog .blog-slider .carousel-inner .carousel-item .blog-text p {
+  text-align: center;
+}
+
+.blog .blog-slider .carousel-inner .carousel-item .blog-text a {
+  font-weight: bold;
+  color: var(--bgColor2);
+  background: var(--mainColor);
+}
+
+.blog .blog-slider .arrow-slider {
+  position: relative;
+}
+
+.blog .blog-slider .carousel-control-prev,
+.blog .blog-slider .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.blog .blog-slider .carousel-control-prev {
+  left: 30%;
+}
+
+.blog .blog-slider .carousel-control-next {
+  right: 30%;
+}
+
+/* #7 - Contact Setting */
+.contact i {
+  color: var(--fontColor1);
+}
+
+/* #8 - Footer Setting */
+.footer {
+  background: var(--bgColor2);
+}
+
+/* ******************** */
+/* ***** * About * ***** */
+/* ******************** */
+
+/* #2 - Header Setting */
+header.about-header {
+  margin-top: 70px;
+}
+
+header.about-header img {
+  background: var(--bgColor2);
+  outline: 3px solid var(--mainColor);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+header.about-header p {
+  line-height: 1.8;
+}
+
+header.about-header ul {
+  font-size: 12px;
+  font-weight: bold;
+  background: var(--bgColor2);
+}
+
+/* #3 - Education Setting */
+article.education .education-item {
+  background: var(--bgColor2);
+  border: 1px solid var(--mainColor);
+}
+
+article.education .education-item p:first-of-type {
+  line-height: 2;
+  font-size: 12px;
+  min-height: 75px;
+}
+
+article.education .education-item p span {
+  font-weight: bold;
+  display: inline-block;
+  color: var(--bgColor2);
+  background: var(--mainColor);
+}
+
+/* #4 - Experience Setting */
+article.experience {
+  background: var(--bgColor2);
+}
+
+article.experience .experience-box div {
+  background: var(--bgColor1);
+  border: 1px solid var(--mainColor);
+}
+
+article.experience .experience-box div h4 {
+  min-height: 70px;
+  line-height: 1.8;
+}
+
+article.experience .experience-box div img {
+  background: var(--bgColor1);
+  border: 1px solid var(--mainColor);
+}
+
+/* #5 - Skills Setting */
+article.skills {
+  background: var(--bgColor1);
+}
+
+article.skills .card {
+  border: none;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+article.skills .card .percent {
+  width: 75px;
+  height: 75px;
+  z-index: 1000;
+  position: relative;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+article.skills .card .percent .number {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+article.skills .card .percent .number h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--fontColor1);
+}
+
+article.skills .card .percent .number h2 span {
+  font-size: 12px;
+  color: var(--fontColor1);
+}
+
+article.skills .card .box .text {
+  font-size: 16px;
+  min-height: 40px;
+  margin-top: 20px;
+  position: relative;
+  letter-spacing: 1px;
+  color: var(--fontColor1);
+  text-transform: uppercase;
+}
+
+article.skills svg {
+  width: 75px;
+  height: 75px;
+  z-index: 1000;
+  position: relative;
+}
+
+article.skills svg circle {
+  fill: none;
+  width: 100%;
+  height: 100%;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke: #252525;
+  transform: translate(2.5px, 2.5px);
+  -webkit-transform: translate(2.5px, 2.5px);
+  -moz-transform: translate(2.5px, 2.5px);
+  -ms-transform: translate(2.5px, 2.5px);
+  -o-transform: translate(2.5px, 2.5px);
+}
+
+article.skills svg circle:nth-child(2) {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+}
+
+article.skills .card:nth-child(1) svg circle:nth-child(2) {
+  stroke: var(--mainColor);
+  stroke-dashoffset: calc(220 - (220 * 80) / 100);
+}
+
+article.skills .card:nth-child(2) svg circle:nth-child(2) {
+  stroke: var(--mainColor);
+  stroke-dashoffset: calc(220 - (220 * 90) / 100);
+}
+
+article.skills .card:nth-child(3) svg circle:nth-child(2) {
+  stroke: var(--mainColor);
+  stroke-dashoffset: calc(220 - (220 * 85) / 100);
+}
+
+article.skills .card:nth-child(4) svg circle:nth-child(2) {
+  stroke: var(--mainColor);
+  stroke-dashoffset: calc(220 - (220 * 75) / 100);
+}
+
+article.skills h6 {
+  color: var(--fontColor1);
+}
+
+article.skills .progress {
+  --bs-progress-bg: var(--bgColor2);
+  border: 1px solid var(--bgColor2);
+  --bs-progress-bar-bg: var(--mainColor);
+  --bs-progress-bar-color: var(--bgColor2);
+}
+
+article.skills .progress-stacked {
+  --bs-progress-bg: #252525;
+  --bs-progress-height: 0.5rem;
+}
+
+/* #6 - Interests Setting */
+article.interests {
+  background: var(--bgColor2);
+}
+
+article.interests i {
+  color: var(--mainColor);
+}

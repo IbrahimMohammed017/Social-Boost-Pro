@@ -1,0 +1,87 @@
+/* Global Setting */
+:root {
+  --mainColor: #c49c4dff;
+  --bgColor1: #000;
+  --bgColor2: #141414e6;
+  --fontColor1: #F5DEB3;
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  header.home-header {
+    background: url(/images/bg-slider-sm.png);
+    background-size: cover;
+  }
+
+  header.home-header p {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 991px) {
+  nav .navbar-nav {
+    background: var(--bgColor2) !important;
+  }
+
+  .about .my-info .my-info-box {
+    flex-direction: column-reverse;
+  }
+
+  .about .my-info .my-info-box .contact-info,
+  .about .my-info .my-info-box .my-img {
+    margin-bottom: 20px;
+  }
+
+  article.skills h6 {
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  header.about-header img {
+    width: 50% !important;
+  }
+
+  header.about-header ul {
+    flex-direction: column;
+    align-items: start !important;
+    justify-content: flex-start !important;
+  }
+
+  article.skills h6 {
+    min-height: auto;
+  }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (large desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (larger desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XL devices (very large screens, 1400px and up) */
+@media (min-width: 1400px) {}
+
+/* XXL devices (very large screens, 2000px and up) */
+@media (min-width: 2000px) {
+  .nav-link {
+    font-size: 25px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+}
+
+/* XXL devices (very large screens, 3000px and up) */
+@media (min-width: 3000px) {
+  .nav-link {
+    font-size: 30px;
+  }
+}
