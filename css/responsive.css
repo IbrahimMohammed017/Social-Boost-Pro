@@ -9,7 +9,7 @@
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
   header.home-header {
-    background: url(/images/bg-slider-sm.png);
+    background: url(../images/bg-slider-sm.png);
     background-size: cover;
   }
 

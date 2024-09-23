@@ -145,7 +145,7 @@ nav .dropdown-toggle::after {
 header.home-header {
   min-height: 100vh;
   position: relative;
-  background: url(/images/bg-slider.png);
+  background: url(../images/bg-slider.png);
   background-size: cover;
 }
 
