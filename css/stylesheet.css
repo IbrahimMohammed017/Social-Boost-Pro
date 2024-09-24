@@ -80,6 +80,13 @@ hr {
   text-align: justify;
 }
 
+
+/* Text Seclection Setting */
+::selection {
+  color: var(--bgColor2);
+  background: var(--mainColor);
+}
+
 /* Scrollbar Setting */
 ::-webkit-scrollbar {
   width: 8px;
@@ -610,4 +617,12 @@ article.interests {
 
 article.interests i {
   color: var(--mainColor);
+}
+
+/* ******************** */
+/* * Social Boost Pro * */
+/* ******************** */
+article.services-boost h4:first-of-type {
+  position: relative;
+  color: var(--fontColor1);
 }
