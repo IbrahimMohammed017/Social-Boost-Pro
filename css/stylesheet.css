@@ -235,10 +235,7 @@ header.home-header .overlay-text {
 }
 
 .services .services-box .services-item:hover .order {
-  font-weight: bold;
-  color: var(--bgColor2);
-  background: var(--mainColor);
-  border: 1px solid var(--bgColor2);
+  cursor: pointer;
 }
 
 .services .services-box .services-item .services-icon {
