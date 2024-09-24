@@ -304,7 +304,7 @@ header.home-header .overlay-text {
 
 .services .services-popup .popup-item.course ul li {
   height: 500px;
-} 
+}
 
 .services .services-popup .popup-item ul li h5 {
   color: var(--mainColor);
@@ -467,17 +467,17 @@ article.experience {
   background: var(--bgColor2);
 }
 
-article.experience .experience-box div {
+article.experience .experience-box .experience-item {
   background: var(--bgColor1);
   border: 1px solid var(--mainColor);
 }
 
-article.experience .experience-box div h4 {
-  min-height: 70px;
-  line-height: 1.8;
+article.experience .experience-box .experience-item .comp-name {
+  border: none !important;
 }
 
-article.experience .experience-box div img {
+article.experience .experience-box .experience-item .comp-name img {
+  width: 70%;
   background: var(--bgColor1);
   border: 1px solid var(--mainColor);
 }

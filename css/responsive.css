@@ -51,6 +51,14 @@
   article.skills h6 {
     min-height: auto;
   }
+
+  article.education .education-item {
+    min-height: 216px;
+  }
+
+  article.education .education-item p:first-of-type {
+    min-height: 96px;
+  }
 }
 
 /* Small devices (tablets, 576px and up) */
