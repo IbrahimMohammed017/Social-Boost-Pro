@@ -1,6 +1,6 @@
 /* Global Setting */
 :root {
-  --mainColor: #c49c4dff;
+  --mainColor:  #c49c4dff;
   --bgColor1: #000;
   --bgColor2: #141414e6;
   --fontColor1: #F5DEB3;
@@ -72,7 +72,7 @@
   .services .services-box .services-item .order div {
     text-align: center !important;
   }
-  
+
   .services .services-box .services-item .order h5 {
     margin: 10px auto;
   }

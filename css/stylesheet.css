@@ -226,22 +226,14 @@ header.home-header .overlay-text {
 }
 
 /* #4 - Services Setting */
-.services .services-box .services-item {
+.services .services-box .services-item,
+article.services-boost .services-item {
   background: var(--bgColor2);
   border: 1px solid var(--mainColor);
 }
 
-.services .services-box .services-item p {
-  min-height: 120px;
-}
-
-.services .services-box .services-item button {
-  color: var(--mainColor);
-  background: var(--bgColor2);
-  border: 1px solid var(--mainColor);
-}
-
-.services .services-box .services-item:hover .order {
+.services .services-box .services-item:hover .order,
+article.services-boost .order {
   cursor: pointer;
 }
 
@@ -253,7 +245,8 @@ header.home-header .overlay-text {
   color: var(--mainColor);
 }
 
-.services .services-popup .popup-item {
+.services .services-popup .popup-item,
+article.services-boost .services-popup .popup-item {
   top: 50%;
   left: 50%;
   width: 90%;
@@ -276,11 +269,13 @@ header.home-header .overlay-text {
   -o-transform: translate(-50%, -50%) scale(0.5);
 }
 
-.services .services-popup .popup-item::-webkit-scrollbar {
+.services .services-popup .popup-item::-webkit-scrollbar,
+article.services-boost .services-popup .popup-item::-webkit-scrollbar {
   display: none;
 }
 
-.services .services-popup .popup-item.active {
+.services .services-popup .popup-item.active,
+article.services-boost .services-popup .popup-item.active {
   opacity: 1;
   z-index: 2000;
   transform: translate(-50%, -50%) scale(1);
@@ -290,7 +285,14 @@ header.home-header .overlay-text {
   -o-transform: translate(-50%, -50%) scale(1);
 }
 
-.services .services-popup .popup-item .close {
+.services .services-popup .popup-item a {
+  font-weight: bold;
+  color: var(--bgColor2);
+  background: var(--mainColor);
+}
+
+.services .services-popup .popup-item .close,
+article.services-boost .popup-item .close {
   top: 20px;
   right: 20px;
   border: none;
@@ -622,7 +624,59 @@ article.interests i {
 /* ******************** */
 /* * Social Boost Pro * */
 /* ******************** */
-article.services-boost h4:first-of-type {
+article.services-boost h3 {
   position: relative;
   color: var(--fontColor1);
+}
+
+article.services-boost p {
+  line-height: 2;
+  font-weight: bold;
+}
+
+article.services-boost hr {
+  width: 25%;
+  margin: 0 auto;
+}
+
+article.services-boost .services-title {
+  color: var(--mainColor);
+}
+
+article.services-boost .order-button {
+  width: fit-content;
+  color: var(--bgColor2);
+  background: var(--mainColor);
+}
+
+article.services-boost .popup-item .close {
+  left: 20px;
+  right: auto;
+}
+
+article.services-boost .services-popup .popup-item {
+  background: var(--bgColor1);
+}
+
+article.services-boost .services-popup .popup-item span {
+  font-size: 18px;
+  color: var(--mainColor);
+}
+
+article.services-boost .services-popup .popup-item h3 {
+  color: var(--mainColor);
+}
+
+article.services-boost .services-popup .popup-item hr {
+  margin: 0;
+}
+
+article.services-boost .services-popup .popup-item h4 {
+  margin-top: 25px;
+}
+
+article.services-boost .buy-now {
+  font-weight: bold;
+  color: var(--bgColor2);
+  background: var(--mainColor);
 }

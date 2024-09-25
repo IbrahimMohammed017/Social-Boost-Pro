@@ -1,54 +1,3 @@
-document.querySelectorAll(".order").forEach((button) => {
-  button.addEventListener("click", function () {
-    const orderClass = this.getAttribute("data-order");
-
-    // 1. إضافة الهاش "#" مع data-order إلى الرابط
-    window.location.hash = orderClass;
-
-    // 2. إظهار العنصر المطلوب مع التأثير السلس
-    const popup = document.querySelector(orderClass);
-    popup.classList.add("active");
-
-    // 3. منع الذهاب إلى أعلى الصفحة
-    popup.scrollIntoView({ behavior: "smooth" });
-
-    // إضافة استماع للأزرار لإغلاق الـ popup عند الضغط على ESC أو زر الرجوع في الهاتف
-    document.addEventListener("keydown", handleKeyPress);
-    window.addEventListener("popstate", handlePopState);
-  });
-});
-
-document.querySelectorAll(".close").forEach((button) => {
-  button.addEventListener("click", closePopup);
-});
-
-// دالة لإغلاق الـ popup
-function closePopup() {
-  const activePopup = document.querySelector(".popup-item.active");
-  if (activePopup) {
-    activePopup.classList.remove("active");
-
-    // إعادة الرابط لوضعه الطبيعي
-    history.pushState("", document.title, window.location.pathname);
-
-    // إزالة الاستماع على الأحداث بعد الإغلاق
-    document.removeEventListener("keydown", handleKeyPress);
-    window.removeEventListener("popstate", handlePopState);
-  }
-}
-
-// دالة لمعالجة الضغط على ESC
-function handleKeyPress(event) {
-  if (event.key === "Escape") {
-    closePopup();
-  }
-}
-
-// دالة لمعالجة الضغط على زر الرجوع في الهاتف
-function handlePopState() {
-  closePopup();
-}
-
 /* **** **** ** **** **** */
 /* **** Navbar Background **** */
 /* **** **** ** **** **** */
@@ -285,3 +234,59 @@ var mixer = mixitup(".category-box", {
     duration: 500,
   },
 });
+
+/* **** **** ** **** **** */
+/* **** Popup Setting **** */
+/* **** **** ** **** **** */
+document.querySelectorAll(".order").forEach((button) => {
+  button.addEventListener("click", function () {
+    const orderClass = this.getAttribute("data-order");
+    window.location.hash = orderClass;
+    const popup = document.querySelector(orderClass);
+    popup.classList.add("active");
+    popup.scrollIntoView({ behavior: "smooth" });
+    document.addEventListener("keydown", handleKeyPress);
+    window.addEventListener("popstate", handlePopState);
+  });
+});
+
+document.querySelectorAll(".close").forEach((button) => {
+  button.addEventListener("click", closePopup);
+});
+
+function closePopup() {
+  const activePopup = document.querySelector(".popup-item.active");
+  if (activePopup) {
+    activePopup.classList.remove("active");
+    history.pushState("", document.title, window.location.pathname);
+    document.removeEventListener("keydown", handleKeyPress);
+    window.removeEventListener("popstate", handlePopState);
+  }
+}
+
+function handleKeyPress(event) {
+  if (event.key === "Escape") {
+    closePopup();
+  }
+}
+
+function handlePopState() {
+  closePopup();
+}
+
+/* **** **** ** **** **** */
+/* **** Change Order **** */
+/* **** **** ** **** **** */
+// document.addEventListener("DOMContentLoaded", function () {
+//   const items = Array.from(
+//     document.querySelectorAll(".services-boost .category")
+//   );
+
+//   const orders = items.map((_, index) => index + 1);
+
+//   orders.sort(() => Math.random() - 0.5);
+
+//   items.forEach((item, index) => {
+//     item.style.order = orders[index];
+//   });
+// });
