@@ -367,6 +367,11 @@ article.services-boost .popup-item .close {
   background: var(--mainColor);
   border-color: var(--bgColor2);
   color: var(--bgColor2) !important;
+  border-radius: 20% !important;
+  -webkit-border-radius: 20% !important;
+  -moz-border-radius: 20% !important;
+  -ms-border-radius: 20% !important;
+  -o-border-radius: 20% !important;
 }
 
 .portfolio .category-box .category {
@@ -673,6 +678,10 @@ article.services-boost .services-popup .popup-item hr {
 
 article.services-boost .services-popup .popup-item h4 {
   margin-top: 25px;
+}
+
+article.services-boost .price b {
+  color: var(--mainColor);
 }
 
 article.services-boost .buy-now {

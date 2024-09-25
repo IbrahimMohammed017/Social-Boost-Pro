@@ -76,9 +76,7 @@ document.addEventListener("scroll", updateActiveLinkOnScroll);
 /* **** Change Logo **** */
 /* **** **** ** **** **** */
 let linksLogo = document.querySelectorAll(".themeColor li");
-
 let logo = document.querySelectorAll(".navbar-brand img");
-
 window.onload = function () {
   let savedTheme = localStorage.getItem("selectedTheme");
 
@@ -133,7 +131,6 @@ var themeCSS = {
 };
 
 let linksColor = document.querySelectorAll("li[data-theme]");
-
 let root = document.documentElement;
 
 window.onload = function () {
