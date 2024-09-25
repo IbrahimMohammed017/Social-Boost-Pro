@@ -238,10 +238,6 @@ article.services-boost .order {
 }
 
 .services .services-box .services-item .services-icon {
-  color: #4b4a4a8c;
-}
-
-.services .services-box .services-item:hover .services-icon {
   color: var(--mainColor);
 }
 
@@ -348,7 +344,7 @@ article.services-boost .popup-item .close {
 
 .services .services-popup .popup-item ul li a {
   font-weight: bold;
-  color: var(--mainColor);
+  color: var(--bgColor2);
   border: 1px solid var(--mainColor);
 }
 
@@ -676,8 +672,16 @@ article.services-boost .services-popup .popup-item hr {
   margin: 0;
 }
 
-article.services-boost .services-popup .popup-item h4 {
-  margin-top: 25px;
+article.services-boost .services-popup .popup-item h4:first-of-type {
+  margin-top: 20px;
+}
+
+article.services-boost .services-popup .popup-item h4:not(:first-of-type) {
+  margin-top: 35px;
+}
+
+article.services-boost .services-popup .popup-item ul li {
+  margin-bottom: 10px;
 }
 
 article.services-boost .price b {
