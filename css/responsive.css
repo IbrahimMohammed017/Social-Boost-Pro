@@ -1,9 +1,16 @@
 /* Global Setting */
 :root {
-  --mainColor:  #c49c4dff;
+  --mainColor: #c49c4dff;
   --bgColor1: #000;
   --bgColor2: #141414e6;
   --fontColor1: #F5DEB3;
+}
+
+/* Very Extra small devices (phones, less than 500px) */
+@media (max-width: 500px) {
+  .services-title h5 {
+    height: 50px;
+  }
 }
 
 /* Extra small devices (phones, less than 576px) */
