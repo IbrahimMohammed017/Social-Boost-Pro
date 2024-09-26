@@ -274,16 +274,16 @@ function handlePopState() {
 /* **** **** ** **** **** */
 /* **** Change Order **** */
 /* **** **** ** **** **** */
-// document.addEventListener("DOMContentLoaded", function () {
-//   const items = Array.from(
-//     document.querySelectorAll(".services-boost .category")
-//   );
+document.addEventListener("DOMContentLoaded", function () {
+  const items = Array.from(
+    document.querySelectorAll(".services-boost .category")
+  );
 
-//   const orders = items.map((_, index) => index + 1);
+  const orders = items.map((_, index) => index + 1);
 
-//   orders.sort(() => Math.random() - 0.5);
+  orders.sort(() => Math.random() - 0.5);
 
-//   items.forEach((item, index) => {
-//     item.style.order = orders[index];
-//   });
-// });
+  items.forEach((item, index) => {
+    item.style.order = orders[index];
+  });
+});
