@@ -412,13 +412,17 @@ article.services-boost .popup-item .close {
 }
 
 /* #7 - Contact Setting */
+.contact {
+  background: var(--bgColor2);
+}
+
 .contact i {
   color: var(--fontColor1);
 }
 
 /* #8 - Footer Setting */
 .footer {
-  background: var(--bgColor2);
+  background: var(--bgColor1);
 }
 
 /* ******************** */
