@@ -162,65 +162,6 @@ function applyTheme(themeClass) {
 }
 
 /* **** **** ** **** **** */
-/* **** Change Text Of Slider **** */
-/* **** **** ** **** **** */
-document.addEventListener("DOMContentLoaded", function () {
-  const texts = [
-    "Professional & attractive website design",
-    "Design logos that show your brand personality",
-    "Innovative QR code designs to encourage customers to interact",
-    "Provide professional services for Microsoft Office programs",
-    "Data analysis services with the best advanced means",
-    "Social media services to enhance your presence",
-  ];
-
-  let index = 0;
-  let charIndex = 0;
-  let currentText = "";
-  let isDeleting = false;
-  let cursorVisible = true;
-
-  const speed = 40; // سرعة الكتابة والحذف
-  const holdTime = 2000; // المدة الزمنية للاحتفاظ بالنص الكامل قبل البدء في الحذف
-
-  const pElement = document.querySelector(".slider-text");
-  const cursorElement = document.createElement("span");
-  cursorElement.innerText = "|";
-  cursorElement.style.display = "inline-block";
-  cursorElement.style.opacity = "1";
-  pElement.appendChild(cursorElement);
-
-  function updateText() {
-    if (isDeleting) {
-      currentText = texts[index].substring(0, charIndex--);
-    } else {
-      currentText = texts[index].substring(0, charIndex++);
-    }
-
-    pElement.innerText = currentText;
-    pElement.appendChild(cursorElement);
-
-    if (!isDeleting && charIndex === texts[index].length) {
-      setTimeout(() => (isDeleting = true), holdTime);
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      index = (index + 1) % texts.length;
-    }
-
-    setTimeout(updateText, speed);
-  }
-
-  function blinkCursor() {
-    cursorVisible = !cursorVisible;
-    cursorElement.style.opacity = cursorVisible ? "1" : "0";
-    setTimeout(blinkCursor, 500);
-  }
-
-  updateText();
-  blinkCursor();
-});
-
-/* **** **** ** **** **** */
 /* **** Shuffle Category **** */
 /* **** **** ** **** **** */
 var mixer = mixitup(".category-box", {
